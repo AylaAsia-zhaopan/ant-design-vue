@@ -15,7 +15,7 @@ export type ButtonHTMLType = typeof ButtonHTMLTypes[number];
 export type LegacyButtonType = ButtonType | 'danger';
 export function convertLegacyProps(type?: LegacyButtonType): ButtonProps {
   if (type === 'danger') {
-    return { danger: true };
+    return { danger: true, type: 'primary' };
   }
   return { type };
 }
