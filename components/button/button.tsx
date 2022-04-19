@@ -15,7 +15,6 @@ import { flattenChildren, initDefaultProps } from '../_util/props-util';
 import useConfigInject from '../_util/hooks/useConfigInject';
 import devWarning from '../vc-util/devWarning';
 import LoadingIcon from './LoadingIcon';
-import { convertLegacyProps } from './buttonTypes';
 
 import type { ButtonType } from './buttonTypes';
 import type { VNode, Ref } from 'vue';
@@ -37,11 +36,6 @@ export default defineComponent({
   slots: ['icon'],
   emits: ['click', 'mousedown'],
   setup(props, { slots, attrs, emit }) {
-    // props = {
-    //   ...props,
-    //   ...convertLegacyProps(props.type)
-    // };
-
     const { prefixCls, autoInsertSpaceInButton, direction, size } = useConfigInject('btn', props);
 
     const buttonNodeRef = ref<HTMLElement>(null);
