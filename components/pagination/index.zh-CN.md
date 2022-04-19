@@ -28,7 +28,7 @@ cover: https://raw.githubusercontent.com/ayla-web/ayla-antd/ayla/site/src/assets
 | showLessItems | 是否显示较少页面内容 | boolean | false | 1.5.0 |
 | showQuickJumper | 是否可以快速跳转至某页 | boolean | false |  |
 | showSizeChanger | 是否可以改变 pageSize | boolean | false |  |
-| showTotal | 用于显示数据总量和当前数据顺序 | Function(total, range) | - |  |
+| showTotal | 用于显示数据总量和当前数据顺序<br /><i>为 `true` 时模板为 `共 ${total} 条记录 第 ${current} / ${pagesNum} 页` </i> | boolean \| Function(total, range) | - |  |
 | simple | 当添加该属性时，显示为简单分页 | boolean | - |  |
 | size | 当为「small」时，是小尺寸分页 | string | "" |  |
 | total | 数据总数 | number | 0 |  |

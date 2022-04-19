@@ -48,7 +48,7 @@ export default defineComponent({
     showTitle: PropTypes.looseBool.def(true),
     pageSizeOptions: PropTypes.arrayOf(PropTypes.oneOfType([PropTypes.number, PropTypes.string])),
     buildOptionText: PropTypes.func,
-    showTotal: PropTypes.func,
+    showTotal: PropTypes.oneOfType([PropTypes.looseBool, PropTypes.func]),
     simple: PropTypes.looseBool,
     locale: PropTypes.object.def(LOCALE),
     itemRender: PropTypes.func.def(defaultItemRender),
@@ -616,14 +616,22 @@ export default defineComponent({
     let totalText = null;
 
     if (showTotal) {
-      totalText = (
-        <li class={`${prefixCls}-total-text`}>
-          {showTotal(total, [
-            total === 0 ? 0 : (stateCurrent - 1) * statePageSize + 1,
-            stateCurrent * statePageSize > total ? total : stateCurrent * statePageSize,
-          ])}
-        </li>
-      );
+      if (typeof showTotal === 'function') {
+        totalText = (
+          <li class={`${prefixCls}-total-text`}>
+            {showTotal(total, [
+              total === 0 ? 0 : (stateCurrent - 1) * statePageSize + 1,
+              stateCurrent * statePageSize > total ? total : stateCurrent * statePageSize,
+            ])}
+          </li>
+        );
+      } else {
+        totalText = totalText = (
+          <li class={`${prefixCls}-total-text`}>
+            共 {total} 条记录 第 {stateCurrent} / {Math.ceil(total / statePageSize)} 页
+          </li>
+        );
+      }
     }
     const prevDisabled = !hasPrev || !allPages;
     const nextDisabled = !hasNext || !allPages;

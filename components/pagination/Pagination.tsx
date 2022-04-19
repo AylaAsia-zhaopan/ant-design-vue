@@ -28,7 +28,9 @@ export const paginationProps = () => ({
     type: [Boolean, Object] as PropType<boolean | { goButton?: any }>,
     default: undefined as boolean | { goButton?: any },
   },
-  showTotal: Function as PropType<(total: number, range: [number, number]) => any>,
+  showTotal: [Boolean, Function] as PropType<
+    boolean | ((total: number, range: [number, number]) => any)
+  >,
   size: String as PropType<'default' | 'small'>,
   simple: { type: Boolean, default: undefined },
   locale: Object,
