@@ -16,7 +16,7 @@
         {{ $t('app.header.menu.components') }}
       </router-link>
     </a-menu-item>
-    <a-menu-item v-if="isZhCN" key="surely-vue">
+    <!-- <a-menu-item v-if="isZhCN" key="surely-vue">
       <a
         href="https://www.surely.cool"
         target="_blank"
@@ -24,7 +24,6 @@
         style="position: relative"
       >
         高级组件
-        <a-badge color="red" style="position: absolute; top: -35px; right: -15px" />
       </a>
     </a-menu-item>
     <a-menu-item key="store">
@@ -35,7 +34,6 @@
         style="position: relative"
       >
         {{ $t('app.header.menu.store') }}
-        <!-- <a-badge color="red" style="position: absolute; top: -35px; right: -15px" /> -->
       </a>
     </a-menu-item>
     <a-menu-item v-if="isZhCN" key="geektime">
@@ -46,19 +44,14 @@
         style="position: relative"
       >
         实战课程
-        <!-- <a-badge color="red" style="position: absolute; top: -35px; right: -15px" /> -->
       </a>
-    </a-menu-item>
+    </a-menu-item> -->
     <template v-if="isMobile">
-      <a-menu-item key="switch-lang" @click="$emit('langChange')">
+      <!-- <a-menu-item key="switch-lang" @click="$emit('langChange')">
         {{ $t('app.header.lang') }}
-      </a-menu-item>
+      </a-menu-item> -->
       <a-menu-item key="github">
-        <a
-          href="https://github.com/vueComponent/ant-design-vue"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/ayla-web/ayla-antd" target="_blank" rel="noopener noreferrer">
           Github
         </a>
       </a-menu-item>

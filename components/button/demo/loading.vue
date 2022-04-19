@@ -32,8 +32,20 @@ A loading indicator can be added to a button by setting the `loading` property o
   <a-space style="width: 100%">
     <a-button type="primary" loading />
     <a-button type="primary" shape="circle" loading />
-    <a-button danger shape="round" loading />
+    <a-button type="danger" shape="round" loading />
   </a-space>
+  <br />
+  <a-button>Secondary</a-button>
+  <a-button loading>Secondary(loading)</a-button>
+  <br />
+  <a-button type="text">Text</a-button>
+  <a-button type="text" loading>Text(loading)</a-button>
+  <br />
+  <a-button type="danger">Danger Default</a-button>
+  <a-button type="danger" loading>Danger Default(loading)</a-button>
+  <br />
+  <a-button type="text-danger">Danger Text</a-button>
+  <a-button type="text-danger" loading>Danger Text(loading)</a-button>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';

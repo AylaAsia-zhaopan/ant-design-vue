@@ -1,26 +1,26 @@
 <template>
   <demo-sort>
     <basic />
-    <disabled />
-    <ghost />
-    <icon />
-    <loading />
     <multiple />
+    <loading />
+    <disabled />
+    <!-- <ghost /> -->
     <size />
+    <icon />
     <block />
-    <danger />
+    <!-- <danger /> -->
   </demo-sort>
 </template>
 <script lang="ts">
 import Basic from './basic.vue';
 import Disabled from './disabled.vue';
-import Ghost from './ghost.vue';
+// import Ghost from './ghost.vue';
 import Icon from './icon.vue';
 import Loading from './loading.vue';
 import Multiple from './multiple.vue';
 import Size from './size.vue';
 import Block from './block.vue';
-import Danger from './danger.vue';
+// import Danger from './danger.vue';
 import CN from '../index.zh-CN.md';
 import US from '../index.en-US.md';
 import { defineComponent } from 'vue';
@@ -31,13 +31,13 @@ export default defineComponent({
   components: {
     Basic,
     Disabled,
-    Ghost,
+    // Ghost,
     Icon,
     Loading,
     Multiple,
     Size,
     Block,
-    Danger,
+    // Danger,
   },
   setup() {
     return {};

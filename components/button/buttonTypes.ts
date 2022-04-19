@@ -4,7 +4,17 @@ import PropTypes from '../_util/vue-types';
 import type { ExtractPropTypes, PropType } from 'vue';
 import type { SizeType } from '../config-provider';
 
-const ButtonTypes = tuple('default', 'primary', 'ghost', 'dashed', 'link', 'text');
+const ButtonTypes = tuple(
+  'default',
+  'primary',
+  'ghost',
+  'dashed',
+  'link',
+  'text',
+  'secondary',
+  'danger',
+  'text-danger',
+);
 export type ButtonType = typeof ButtonTypes[number];
 const ButtonShapes = tuple('default', 'circle', 'round');
 export type ButtonShape = typeof ButtonShapes[number];
@@ -17,6 +27,12 @@ export function convertLegacyProps(type?: LegacyButtonType): ButtonProps {
   if (type === 'danger') {
     return { danger: true, type: 'primary' };
   }
+  // if (type === 'text-danger') {
+  //   return { danger: true, type: 'text' };
+  // }
+  // if (type === 'secondary') {
+  //   return { type: 'default' };
+  // }
   return { type };
 }
 

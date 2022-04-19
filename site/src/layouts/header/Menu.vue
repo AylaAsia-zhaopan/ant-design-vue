@@ -12,24 +12,24 @@
       :get-popup-container="trigger => trigger.parentNode"
     >
       <a-select-option :value="antdVersion">{{ antdVersion }}</a-select-option>
-      <a-select-option value="1.x" @click="changeVersion">1.x</a-select-option>
+      <!-- <a-select-option value="1.x" @click="changeVersion">1.x</a-select-option> -->
     </a-select>
-    <a-button
+    <!-- <a-button
       key="lang-button"
       size="small"
       class="header-button header-lang-button"
       @click="onLangChange"
     >
       {{ $t('app.header.lang') }}
-    </a-button>
-    <More />
+    </a-button> -->
+    <!-- <More /> -->
     <Github />
   </template>
 </template>
 <script lang="ts">
 import { defineComponent, ref } from 'vue';
 import Github from './Github.vue';
-import More from './More.vue';
+// import More from './More.vue';
 import Navigation from './Navigation.vue';
 import Ecosystem from './Ecosystem.vue';
 import { version } from 'ant-design-vue';
@@ -40,7 +40,7 @@ export default defineComponent({
   components: {
     Navigation,
     Github,
-    More,
+    // More,
     Ecosystem,
   },
   props: ['isMobile'],
