@@ -57,7 +57,7 @@
     "routes": "node site/scripts/genrateRoutes.js",
     "tsc": "tsc --noEmit",
     "vue-tsc": "vue-tsc --noEmit",
-    "site": "npm run routes && ./node_modules/vite/bin/vite.js build site --base=https://AylaAsia-zhaopan.github.io/ayla-antd",
+    "site": "npm run routes && ./node_modules/vite/bin/vite.js build site --base=https://ayla-web.github.io/ayla-antd",
     "pub:site": "npm run site && node site/scripts/pushToOSS.js",
     "prepare": "husky install",
     "version": "node ./scripts/generate-version",
@@ -72,10 +72,10 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AylaAsia-zhaopan/ayla-antd"
+    "url": "git+https://github.com/ayla-web/ayla-antd"
   },
   "license": "MIT",
-  "homepage": "https://AylaAsia-zhaopan.github.io/ayla-antd",
+  "homepage": "https://ayla-web.github.io/ayla-antd",
   "peerDependencies": {
     "vue": ">=3.2.0"
   },
