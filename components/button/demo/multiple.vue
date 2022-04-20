@@ -1,6 +1,6 @@
 <docs>
 ---
-order: 5
+order: 1
 title:
   zh-CN: 多个按钮组合
   en-US: Multiple Buttons

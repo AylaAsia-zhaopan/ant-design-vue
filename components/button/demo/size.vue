@@ -1,6 +1,6 @@
 <docs>
 ---
-order: 2
+order: 5
 title:
   zh-CN: 按钮尺寸
   en-US: Size

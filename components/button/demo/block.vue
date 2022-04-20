@@ -1,6 +1,6 @@
 <docs>
 ---
-order: 10
+order: 6
 title:
   zh-CN: Block 按钮
   en-US: Block Button
