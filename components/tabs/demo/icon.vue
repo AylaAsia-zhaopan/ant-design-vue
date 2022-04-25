@@ -22,7 +22,7 @@ The Tab with Icon.
       <template #tab>
         <span>
           <apple-outlined />
-          Tab 1
+          Apple
         </span>
       </template>
       Tab 1
@@ -31,20 +31,30 @@ The Tab with Icon.
       <template #tab>
         <span>
           <android-outlined />
-          Tab 2
+          Android
         </span>
       </template>
       Tab 2
     </a-tab-pane>
+    <a-tab-pane key="3">
+      <template #tab>
+        <span>
+          <ant-design-outlined />
+          Ant Design
+        </span>
+      </template>
+      Tab 3
+    </a-tab-pane>
   </a-tabs>
 </template>
 <script lang="ts">
-import { AppleOutlined, AndroidOutlined } from '@ant-design/icons-vue';
+import { AppleOutlined, AndroidOutlined, AntDesignOutlined } from '@ant-design/icons-vue';
 import { defineComponent, ref } from 'vue';
 export default defineComponent({
   components: {
     AppleOutlined,
     AndroidOutlined,
+    AntDesignOutlined,
   },
   setup() {
     return {
