@@ -173,7 +173,7 @@
       min-width: @picker-panel-cell-height;
       height: @picker-panel-cell-height;
       line-height: @picker-panel-cell-height;
-      border-radius: @border-radius-base;
+      border-radius: @border-radius-sm;
       transition: background @animation-duration-slow, border @animation-duration-slow;
     }
 
@@ -187,6 +187,7 @@
 
     // >>> Today
     &-in-view&-today .@{cellClassName} {
+      color: @ayla-color-primary-6;
       &::before {
         position: absolute;
         top: 0;
@@ -195,7 +196,7 @@
         left: 0;
         z-index: 1;
         border: @border-width-base @border-style-base @primary-color;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius-sm;
         content: '';
       }
     }
@@ -205,7 +206,7 @@
       position: relative;
 
       &::before {
-        background: @picker-basic-cell-active-with-range-color;
+        background: @ayla-color-primary-1;
       }
     }
 
@@ -220,7 +221,7 @@
     &-in-view&-range-start:not(&-range-start-single),
     &-in-view&-range-end:not(&-range-end-single) {
       &::before {
-        background: @picker-basic-cell-active-with-range-color;
+        background: @ayla-color-primary-1;
       }
     }
 
@@ -278,12 +279,12 @@
 
     // range start border-radius
     &-in-view&-range-start:not(&-range-start-single):not(&-range-end) .@{cellClassName} {
-      border-radius: @border-radius-base 0 0 @border-radius-base;
+      border-radius: @border-radius-sm 0 0 @border-radius-sm;
     }
 
     // range end border-radius
     &-in-view&-range-end:not(&-range-end-single):not(&-range-start) .@{cellClassName} {
-      border-radius: 0 @border-radius-base @border-radius-base 0;
+      border-radius: 0 @border-radius-sm @border-radius-sm 0;
     }
 
     // DatePanel only
@@ -329,8 +330,8 @@
     &-in-view&-range-hover-start::after {
       left: 6px;
       border-left: @border-width-base dashed @picker-date-hover-range-border-color;
-      border-top-left-radius: @border-radius-base;
-      border-bottom-left-radius: @border-radius-base;
+      border-top-left-radius: @border-radius-sm;
+      border-bottom-left-radius: @border-radius-sm;
     }
 
     // Edge end
@@ -341,8 +342,8 @@
     &-in-view&-range-hover-end::after {
       right: 6px;
       border-right: @border-width-base dashed @picker-date-hover-range-border-color;
-      border-top-right-radius: @border-radius-base;
-      border-bottom-right-radius: @border-radius-base;
+      border-top-right-radius: @border-radius-sm;
+      border-bottom-right-radius: @border-radius-sm;
     }
 
     // >>> Disabled
@@ -370,7 +371,7 @@
 
     // In view
     &-in-view {
-      color: @text-color;
+      color: @ayla-color-text-4;
     }
 
     .picker-cell-inner(~'@{picker-cell-inner-cls}');
@@ -473,23 +474,23 @@
     .@{picker-prefix-cls}-cell-range-hover-start::after {
       left: @hover-cell-fixed-distance;
       border-left: @border-width-base dashed @picker-date-hover-range-border-color;
-      border-radius: @border-radius-base 0 0 @border-radius-base;
+      border-radius: @border-radius-sm 0 0 @border-radius-sm;
 
       .@{picker-prefix-cls}-panel-rtl & {
         right: @hover-cell-fixed-distance;
         border-right: @border-width-base dashed @picker-date-hover-range-border-color;
-        border-radius: 0 @border-radius-base @border-radius-base 0;
+        border-radius: 0 @border-radius-sm @border-radius-sm 0;
       }
     }
     .@{picker-prefix-cls}-cell-range-hover-end::after {
       right: @hover-cell-fixed-distance;
       border-right: @border-width-base dashed @picker-date-hover-range-border-color;
-      border-radius: 0 @border-radius-base @border-radius-base 0;
+      border-radius: 0 @border-radius-sm @border-radius-sm 0;
 
       .@{picker-prefix-cls}-panel-rtl & {
         left: @hover-cell-fixed-distance;
         border-left: @border-width-base dashed @picker-date-hover-range-border-color;
-        border-radius: @border-radius-base 0 0 @border-radius-base;
+        border-radius: @border-radius-sm 0 0 @border-radius-sm;
       }
     }
   }
@@ -632,7 +633,7 @@
             height: @picker-time-panel-cell-height;
             margin: 0;
             padding: 0 0 0 ((@picker-time-panel-column-width - 28px) / 2);
-            color: @text-color;
+            color: @ayla-color-text-4;
             line-height: @picker-time-panel-cell-height;
             border-radius: 0;
             cursor: pointer;
@@ -645,7 +646,12 @@
 
           &-selected {
             .@{picker-prefix-cls}-time-panel-cell-inner {
-              background: @calendar-item-active-bg;
+              background: @ayla-color-primary-6;
+              color: @text-color-inverse;
+
+              &:hover {
+                background: @ayla-color-primary-5;
+              }
             }
           }
 

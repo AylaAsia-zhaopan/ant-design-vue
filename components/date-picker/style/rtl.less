@@ -112,7 +112,7 @@
       min-width: @picker-panel-cell-height;
       height: @picker-panel-cell-height;
       line-height: @picker-panel-cell-height;
-      border-radius: @border-radius-base;
+      border-radius: @border-radius-sm;
       transition: background @animation-duration-slow, border @animation-duration-slow;
     }
 
@@ -171,14 +171,14 @@
     // range start border-radius
     &-in-view&-range-start:not(&-range-start-single):not(&-range-end) .@{cellClassName} {
       .@{picker-prefix-cls}-panel-rtl & {
-        border-radius: 0 @border-radius-base @border-radius-base 0;
+        border-radius: 0 @border-radius-sm @border-radius-sm 0;
       }
     }
 
     // range end border-radius
     &-in-view&-range-end:not(&-range-end-single):not(&-range-start) .@{cellClassName} {
       .@{picker-prefix-cls}-panel-rtl & {
-        border-radius: @border-radius-base 0 0 @border-radius-base;
+        border-radius: @border-radius-sm 0 0 @border-radius-sm;
       }
     }
 
@@ -192,7 +192,7 @@
         left: 0;
         border-right: @border-width-base dashed @picker-date-hover-range-border-color;
         border-left: none;
-        border-radius: 0 @border-radius-base @border-radius-base 0;
+        border-radius: 0 @border-radius-sm @border-radius-sm 0;
       }
     }
 
@@ -206,7 +206,7 @@
         left: 6px;
         border-right: none;
         border-left: @border-width-base dashed @picker-date-hover-range-border-color;
-        border-radius: @border-radius-base 0 0 @border-radius-base;
+        border-radius: @border-radius-sm 0 0 @border-radius-sm;
       }
     }
 
@@ -222,7 +222,7 @@
         left: 6px;
         border-right: @border-width-base dashed @picker-date-hover-range-border-color;
         border-left: @border-width-base dashed @picker-date-hover-range-border-color;
-        border-radius: @border-radius-base;
+        border-radius: @border-radius-sm;
       }
     }
   }
